@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbxmd module="Trimed" ns="https://github.com/trimed-dialect/TriMED">
+    <header>
+        <title>Description of the Trimed data category module for TBX</title>
+    </header>
+    <datCatSet>
+        <descripSpec name="superordinateConcept" datcatId="http://www.isocat.org/datcat/DC-495">
+            <levels>
+                <level>conceptEntry</level>
+            </levels>
+            <content datatype="string"/>
+        </descripSpec>
+           
+        <descripSpec name="subordinateConcept" datcatId="http://www.isocat.org/datcat/DC-490">
+            <levels>
+                <level>conceptEntry</level>
+                </levels>
+            <content datatype="string"/>
+        </descripSpec>
+        
+        <descripSpec name="conceptRelation" datcatId="http://datcatinfo.termweb.se/datcat/DC-142">
+            <levels>
+                <level>conceptEntry</level>
+            </levels>
+            <content datatype="string"/>
+        </descripSpec>
+        
+        <descripSpec name="conceptualSphere" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-9 ">
+            <levels>
+                <level>conceptEntry</level>
+            </levels>
+            <content datatype="picklist">
+                <value>A</value>
+                <value>B</value>
+                <value>C</value>
+                <value>D</value>
+                <value>E</value>
+                <value>F</value>
+                <value>G</value>
+                <value>H</value>
+            </content>
+        </descripSpec>
+        
+        <descripSpec name="subDomain" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-7">
+            <levels>
+                <level>conceptEntry</level>
+            </levels>
+            <content datatype="string"/>
+        </descripSpec>
+        
+        <descripSpec name="conceptIdentifier" datcatId="http://www.datcatinfo.net/datcat/DC-139">
+            <levels>
+                <level>conceptEntry</level>
+            </levels>
+            <content datatype="string"/>
+        </descripSpec>
+        
+        <descripSpec name="languageIdent" datcatId="http://www.datcatinfo.net/datcat/DC-279">
+            <levels>
+                <level>langSec</level>
+            </levels>
+            <content datatype="string"/>
+        </descripSpec>  
+        
+        <descripSpec name="semicAnalysis" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-1">
+            <levels>
+                <level>langSec</level>
+            </levels>
+            <content datatype="string"/>
+        </descripSpec>
+        
+        
+        <descripSpec name="identifier" datcatId="http://www.datcatinfo.net/datcat/DC-3894">
+            <levels>
+                <level>termSec</level>
+            </levels>
+            <content datatype="string"/>
+        </descripSpec>      
+        
+        <termNoteSpec name="grammaticalNumber" datcatId="http://www.datcatinfo.net/datcat/DC-251">
+            <content datatype="picklist">
+                <value>singular</value>
+                <value>plural</value>
+                <value>dual</value>
+                <value>mass</value>
+                <value>otherNumber</value>
+            </content>
+        </termNoteSpec>
+        
+        <termNoteSpec name="derivative" datcatId="http://www.isocat.org/datcat/DC-4611">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="pronunciation" datcatId="http://www.isocat.org/datcat/DC-407">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="etymology" datcatId="http://www.datcatinfo.net/datcat/DC-221">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="variant" datcatId="http://www.isocat.org/datcat/DC-330">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="abbreviation" datcatId="http://www.isocat.org/datcat/DC-1418">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="fullForm" datcatId="http://www.isocat.org/datcat/DC-321">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="acronym" datcatId="http://www.isocat.org/datcat/DC-334">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="synonym" datcatId="http://www.datcatinfo.net/datcat/DC-317">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="register" datcatId="http://www.isocat.org/datcat/DC-423">
+            <content datatype="picklist">
+                <value>colloquialRegister</value>
+                <value>neutralRegister</value>
+                <value>technicalRegister</value>
+                <value>in-houseRegister</value>
+                <value>bench-levelRegister</value>
+                <value>slangRegister</value>
+                <value>vulgarRegister</value>
+            </content>
+        </termNoteSpec>
+        
+        <termNoteSpec name="commonName" datcatId="http://www.isocat.org/datcat/DC-328">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="scientificName" datcatId="http://www.isocat.org/datcat/DC-3754">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="hyponym" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-5">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="hypernym" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-6">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="collocation" datcatId="http://www.datcatinfo.net/datcat/DC-340">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <termNoteSpec name="phraseologicalUnit" datcatId="http://www.datcatinfo.net/datcat/DC-339">
+            <content datatype="string"/>
+        </termNoteSpec>
+        
+        <xref name="icpc2_code" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-2">
+            <levels>
+                <level>termSec</level>
+            </levels>
+            <content datatype="string"/>
+        </xref>
+        
+        <xref name="icd10Code" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-3">
+            <levels>
+                <level>termSec</level>
+            </levels>
+            <content datatype="string"/>
+        </xref>
+        
+        <xref name="snomed" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-4">
+            <levels>
+                <level>termSec</level>
+            </levels>
+            <content datatype="string"/>
+        </xref>
+        
+        <xref name="mesh" trimedDCRId="http://purl.org/trimed/dcr/dc/dc-8">
+            <levels>
+                <level>termSec</level>
+            </levels>
+            <content datatype="string"/>
+        </xref>
+        
+    </datCatSet>
+</tbxmd>
