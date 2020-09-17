@@ -215,6 +215,9 @@
          <ref name="module.descrip"/>
          <ref name="module.termNote"/>
          <ref name="module.xref"/>
+         <ref name="tbxmd"/>
       </choice>
    </start>
+
+
 </grammar>
