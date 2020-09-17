@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/trimed-dialect-2020/TriMED/master/Modules/TBX_trimed_module/Trimed.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <tbxmd module="Trimed" ns="https://github.com/trimed-dialect-2020/">
     <header>
         <title>Description of the Trimed data category module for TBX</title>
