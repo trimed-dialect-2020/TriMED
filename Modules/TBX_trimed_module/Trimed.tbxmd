@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/trimed-dialect-2020/TriMED/master/Modules/TBX_trimed_module/Trimed.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <tbxmd module="Trimed" ns="https://github.com/trimed-dialect-2020/">
     <header>
         <title>Description of the Trimed data category module for TBX</title>
@@ -79,6 +77,9 @@
             <contents datatype="string"/>
         </descripSpec>      
                  
+                 
+                 
+                 
         <termNoteSpec name="grammaticalNumber" DCR.ID="http://www.datcatinfo.net/datcat/DC-251">
             <contents datatype="picklist">
                 <value>singular</value>
@@ -155,7 +156,9 @@
         
         <termNoteSpec name="phraseologicalUnit" DCR.ID="http://www.datcatinfo.net/datcat/DC-339">
             <contents datatype="string"/>
-        </termNoteSpec>        
+        </termNoteSpec>       
+        
+        
         <xrefSpec name="icpc2_code" DCR.ID="http://purl.org/trimed/dcr/dc/dc-2">
             <levels>
                 <level>termSec</level>
