@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:teix="http://www.tei-c.org/ns/Examples"
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+   xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
    ns="https://github.com/trimed-dialect-2020/">
+   
+   <define name="tbxmd">
+      <element name="tbxmd">
+         <a:documentation>The root element of an MDF file.</a:documentation>
+         <attribute name="module">
+            <a:documentation>This is the name of the module</a:documentation>
+            <text/>
+         </attribute>
+         <attribute name="ns">
+            <a:documentation>This is the namespace of the module (for use in DCT style TBX
+               files)</a:documentation>
+            <data datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" type="anyURI"/>
+         </attribute>
+      </element>
+   </define>
    
    <!-- optional metaType attribute -->
    <define name="metaType">
@@ -22,6 +37,7 @@
          </attribute>
       </optional>
    </define>
+   
    
    <!-- shared attributes -->
    <define name="attribute.target.internal">
