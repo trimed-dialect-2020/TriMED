@@ -25,7 +25,7 @@
             <attach/>
         </namespace>
         <namespace ns="https://github.com/trimed-dialect-2020">
-            <validate schema="../Modules/TBX_trimed_module/Trimed2.rng"/>
+            <validate schema="../Modules/TBX_trimed_module/Trimed.rng"/>
             <attach/>
         </namespace>
     </mode>
