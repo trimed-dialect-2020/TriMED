@@ -1,207 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    ns="https://github.com/trimed-dialect-2020">
     
-    <define name="contents">
-        <element name="contents">
-            <a:documentation>If the permitted contents of a data category are picklist values, they
-                will be placed here in &lt;value&gt; tags. Any other data category must select from
-                one of the 4 permitted text datatypes as described in Section 9.5 of ISO
-                30042.</a:documentation>
-            <choice>
-                <group>
-                    <ref name="datatype.general"/>
-                    <optional>
-                        <ref name="targetType"/>
-                    </optional>
-                    <empty/>
-                </group>
-                <group>
-                    <ref name="datatype.picklist"/>
-                    <oneOrMore>
-                        <ref name="value"/>
-                    </oneOrMore>
-                </group>
-            </choice>
-        </element>
-    </define>
-    
-    <define name="datatype.general">
-        <attribute name="datatype">
-            <a:documentation>The values permitted here are found in ISO 30042.</a:documentation>
-            <choice>
-                <value>string</value>
-                <value>basicText</value>
-                <value>noteText</value>
-            </choice>
-        </attribute>
-    </define>
-    
-    <define name="datatype.picklist">
-        <attribute name="datatype">
-            <value>picklist</value>
-        </attribute>
-    </define>
-    
-    <define name="datCatSet">
-        <element name="datCatSet">
-            <a:documentation>: This element contains the collection of permitted data categories in
-                the module.</a:documentation>
-            <oneOrMore>
-                <ref name="datCatSpec"/>
-            </oneOrMore>
-        </element>
-    </define>
-    
-    <define name="datCatSpec">
+    <!-- conceptEntry classified elements -->
+    <define name="module.descrip">
         <choice>
-            <element name="adminSpec">
-                <ref name="datCatSpec.content"/>
+            
+            <element name="superordinateConcept">
+                <text></text>
             </element>
-            <element name="adminNoteSpec">
-                <ref name="datCatSpec.content"/>
+            
+            <element name="subordinateConcept">
+                <text></text>
             </element>
-            <element name="descripSpec">
-                <ref name="datCatSpec.content"/>
+            
+            <element name="conceptualSphere">
+                <choice>
+                    <value>A</value>
+                    <value>B</value>
+                    <value>C</value>
+                    <value>D</value>
+                    <value>E</value>
+                    <value>G</value>
+                    <value>H</value>
+                </choice>
             </element>
-            <element name="descripNoteSpec">
-                <ref name="datCatSpec.content"/>
+            
+            <element name="conceptRelation">
+                <text></text>
             </element>
-            <element name="refSpec">
-                <ref name="datCatSpec.content"/>
+            
+            <element name="subDomain">
+                <text></text>
             </element>
-            <element name="termNoteSpec">
-                <ref name="termNoteSpec.content"/>
+            
+            <element name="semicAnalysis">
+                <text></text>
             </element>
-            <element name="transacSpec">
-                <ref name="datCatSpec.content"/>
-            </element>
-            <element name="transacNoteSpec">
-                <ref name="datCatSpec.content"/>
-            </element>
-            <element name="xrefSpec">
-                <ref name="datCatSpec.content"/>
-            </element>
+            
         </choice>
     </define>
     
-    <define name="datCatSpec.content">
-        <a:documentation>This element is used to provide all necessary information to describe a
-            single data category.</a:documentation>
-        <ref name="datCatSpec.attributes"/>
-        <ref name="levels"/>
-        <ref name="contents"/>
-    </define>
     
-    <define name="datCatSpec.attributes">
-        <attribute name="name">
-            <a:documentation>This is the name of the data category</a:documentation>
-            <text/>
-        </attribute>
+    <!-- termNote classified elements -->
+    <define name="module.termNote">
+        <choice>
+            <element name="identifier">
+                <text></text>
+            </element>
+            
+            <element name="grammaticalNumber">
+                <choice>
+                    <value>singular</value>
+                    <value>plural</value>
+                    <value>dual</value>
+                    <value>mass</value>
+                    <value>otherNumber</value>
+                </choice>
+            </element>
+            
+            <element name="pronunciation">
+                <text></text>
+            </element>
+            
+            <element name="etymology">
+                <text></text>
+            </element>
+            
+            <element name="variant">
+                <text></text>
+            </element>
+            
+            <element name="abbreviation">
+                <text></text>
+            </element>
+            
+            <element name="derivative">
+                <text></text>
+            </element>
+            
+            <element name="fullForm">
+                <text></text>
+            </element>
+            
+            <element name="acronym">
+                <text></text>
+            </element>
+            
+            <element name="synonym">
+                <text></text>
+            </element>
+            
+            <element name="register">
+                <choice>
+                    <value>colloquial register</value>
+                    <value>neutral register</value>
+                    <value>technical register</value>
+                    <value>in-house register</value>
+                    <value>bench-level register</value>
+                    <value>slang register</value>
+                    <value>vulgar register</value>
+                    
+                    <value>registre familier</value>
+                    <value>registre technique</value>
+                    <value>argot</value>
+                    <value>vulgaire</value>
+                    
+                    <value>registro familiare</value>
+                    <value>registro tecnico</value>
+                    <value>registro volgare</value>
+                    
+                </choice>
+            </element>
+            
+            <element name="commonName">
+                <text></text>
+            </element>
+            <element name="scientificName">
+                <text></text>
+            </element>
+            
+            <element name="hypernym">
+                <text></text>
+            </element>
+            
+            <element name="hyponym">
+                <text></text>
+            </element>
+            
+            <element name="collocation">
+                <text></text>
+            </element>
+            
+            <element name="phraseologicalUnit">
+                <text></text>
+            </element>
+            
+        </choice>
+    </define>
+ 
+    <define name="module.xref">
+       <choice>
+           
+           <element name="mesh">
+               <text></text>
+           </element>
+           
+           <element name="snomed">
+               <text></text>
+           </element>
+           
+           <element name="icpc2Code">
+               <text></text>
+           </element>
+           
+           <element name="icd10Code">
+               <text></text>
+           </element>
+           
+       </choice> 
         
-        <attribute name="DCR.ID" >
-            <a:documentation>This is the URI pointing to the source of the data category (DATCatInfo or TriMED dcr)</a:documentation>
-            <data type="anyURI"/>
-        </attribute>
-        
-        
-    </define>
-    
-    <define name="description">
-        <element name="description">
-            <a:documentation>A description of the module being described</a:documentation>
-            <text/>
-        </element>
-    </define>
-    
-    <define name="header">
-        <element name="header">
-            <a:documentation>Container for header information.</a:documentation>
-            <ref name="title"/>
-            <optional>
-                <ref name="description"/>
-            </optional>
-        </element>
-    </define>
-    
-    <define name="level">
-        <element name="level">
-            <choice>
-                <value>conceptEntry</value>
-                <value>langSec</value>
-                <value>termSec</value>
-            </choice>
-        </element>
-    </define>
-    
-    <define name="levels">
-        <element name="levels">
-            <a:documentation>The levels in which the data category may occur.</a:documentation>
-            <oneOrMore>
-                <ref name="level"/>
-            </oneOrMore>
-        </element>
-    </define>
-    
-    <define name="tbxmd">
-        <element name="tbxmd">
-            <a:documentation>The root element of an MDF file.</a:documentation>
-            <attribute name="module">
-                <a:documentation>This is the name of the module</a:documentation>
-                <text/>
-            </attribute>
-            <attribute name="ns">
-                <a:documentation>This is the namespace of the module (for use in DCT style TBX
-                    files)</a:documentation>
-                <data datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" type="anyURI"/>
-            </attribute>
-            <ref name="header"/>
-            <ref name="datCatSet"/>
-        </element>
-    </define>
-    
-    <define name="targetType">
-        <attribute name="targetType">
-            <choice>
-                <value>bibl</value>
-                <value>binaryData</value>
-                <value>conceptSysDescrip</value>
-                <value>element</value>
-                <value>entry</value>
-                <value>external</value>
-                <value>respPerson</value>
-                <value>term</value>
-                <value>thesaurusDescrip</value>
-            </choice>
-        </attribute>
-    </define>
-    
-    <define name="termNoteSpec.content">
-        <ref name="datCatSpec.attributes"/>
-        <ref name="contents"/>
-    </define>
-    
-    <define name="title">
-        <element name="title">
-            <a:documentation>This element is used to provide a more descriptive name for a module,
-                in contrast to the simple name given in the @module attribute of
-                &lt;mdf&gt;></a:documentation>
-            <text/>
-        </element>
-    </define>
-    
-    <define name="value">
-        <element name="value">
-            <a:documentation>A &lt;value&gt; element contains a specific allowed instance of text
-                for a given data category. For example, if the data category is /partOfSpeech/, one
-                of the &lt;value&gt; elements in the &lt;contents&gt; section would be:
-                &lt;value&gt;noun&lt;/value&gt;</a:documentation>
-            <text/>
-        </element>
     </define>
     
     <start>
-        <ref name="tbxmd"/>
+        <choice>
+            <ref name="module.descrip"/>
+            <ref name="module.termNote"/>
+            <ref name="module.xref"/>
+        </choice>
     </start>
+  
 </grammar>

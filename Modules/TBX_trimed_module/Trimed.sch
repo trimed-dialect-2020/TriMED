@@ -30,29 +30,27 @@
             <assert test="parent::tbx:conceptEntry">This DC must be at the concept level.</assert>
         </rule>
         
-        <rule context="trimed:conceptIdentifier">
+       <!-- <rule context="trimed:conceptIdentifier">
             <assert test="parent::tbx:conceptEntry">This DC must be at the concept level.</assert>
         </rule>
         
         <rule context="trimed:languageIdent">
             <assert test="parent::tbx:langSec">This DC must be at the language section level.</assert>
-        </rule>
+        </rule> -->
         
         <rule context="trimed:semicAnalysis">
             <assert test="parent::tbx:langSec">This DC must be at the language section level.</assert>
         </rule>
         
-        <rule context="trimed:identifier">
-            <assert test="parent::tbx:termSec">This DC must be at the term section level.</assert>
-        </rule>
         
     </pattern>
     
     <pattern id="module.trimed.termNote">
-        <rule context="trimed:grammaticalNumber">
-            <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
+        
+        <rule context="trimed:identifier">
+            <assert test="parent::tbx:termSec">This DC must be at the term section level.</assert>
         </rule>
-        <rule context="trimed:derivative">
+        <rule context="trimed:grammaticalNumber">
             <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
         </rule>
         <rule context="trimed:pronunciation">
@@ -65,6 +63,9 @@
             <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
         </rule>
         <rule context="trimed:abbreviation">
+            <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
+        </rule>
+        <rule context="trimed:derivative">
             <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
         </rule>
         <rule context="trimed:fullForm">
